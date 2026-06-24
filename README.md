@@ -6,7 +6,6 @@ At a high level, this artifact includes:
 
 - An instrumented NVIDIA kernel driver module tree in `nvidia-550.163.01`, with a built-in reproduction guide in `nvidia-550.163.01/HOWTO.txt`. This component is used to reproduce the paper results corresponding to Figure 3, Figure 4, Listing 1, and Figure 15 (UVM).
 - A modified GPGPU-Sim based simulator in `gpgpu-sim-uvm` with added Unified Virtual Memory (UVM) support. This component is used for the simulation-based results in Figure 8, 12, 13, 14, 16.
-- A `scripts` directory containing helper scripts, post-processing utilities, and figure-generation support files used throughout the artifact workflow.
 - A `benchmark` directory containing applications we used for main results.
 - The camera-ready paper PDF can be accessed [[here](https://adwaitjog.github.io/docs/pdf/yang_laegis_isca26.pdf)].
 ## Included vs. Omitted Components
@@ -33,7 +32,7 @@ If you use this instrumented driver module, `gpgpu-sim-v4.2` with UVM, or LÆGIS
 @inproceedings{yang2026laegis,
   title     = {{LÆGIS: Pinpointing and Addressing Performance Overheads of GPU-based Confidential Computing}},
   author    = {Yang, Yang and Jog, Adwait},
-  booktitle = {Proceedings of the ACM/IEEE International Symposium on Computer Architecture (ISCA)},
+  booktitle = {Proceedings of the IEEE/ACM International Symposium on Computer Architecture (ISCA)},
   year      = {2026}
 }
 ```
