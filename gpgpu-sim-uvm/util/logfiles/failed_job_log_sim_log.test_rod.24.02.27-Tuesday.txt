@@ -1,0 +1,24 @@
+1         	gpusrv18                      	kmeans-rodinia-3.1  	_o__i___data_kdd_cup	kmeans-rodinia-3.1.g	QV100-2B_I	              0	0     	COMPLETE_ERR_FILE_HAS_CONTENTS	                                                  	
+
+**********************************************************
+kmeans-rodinia-3.1-_o__i___data_kdd_cup--QV100-2B_INSN-V1-SALUS. Status=COMPLETE_ERR_FILE_HAS_CONTENTS
+Last 10 line of /u/xqg5sq/insight-lab/salus/util/job_launching/../../sim_run_11.8/kmeans-rodinia-3.1/_o__i___data_kdd_cup/QV100-2B_INSN-V1-SALUS/kmeans-rodinia-3.1-_o__i___data_kdd_cup.gpgpu-sim_git-commit-7878f929a08e45eaea38c822871483d60470abe0_modified_15.0.o1
+------------------
+doing:  /u/xqg5sq/insight-lab/salus/gpu-app-collection/src/..//bin/11.8/release/kmeans-rodinia-3.1 -o -i ./data/kdd_cup
+doing export CUDA_LAUNCH_BLOCKING=1
+doing: export PATH=/sw/ubuntu-22.04/anaconda3/2022.05/bin:/sw/ubuntu-22.04/anaconda3/2022.05/condabin:/u/xqg5sq/insight-lab/salus/gpgpu-sim_distribution/bin:/u/xqg5sq/Documents/deps/cuda/bin:/bin:/usr/bin:/u/xqg5sq/Documents/deps/cuda/bin
+doing
+doing: export OPENCL_REMOTE_GPU_HOST=REPLACE_REMOTE_HOST
+doing: export OPENCL_CURRENT_TEST_PATH=/u/xqg5sq/insight-lab/salus/util/job_launching/../../sim_run_11.8/kmeans-rodinia-3.1/_o__i___data_kdd_cup/QV100-2B_INSN-V1-SALUS
+doing: cd /u/xqg5sq/insight-lab/salus/util/job_launching/../../sim_run_11.8/kmeans-rodinia-3.1/_o__i___data_kdd_cup/QV100-2B_INSN-V1-SALUS
+doing: export LD_LIBRARY_PATH=/u/xqg5sq/insight-lab/salus/util/job_launching/../../sim_run_11.8/gpgpu-sim-builds/gpgpu-sim_git-commit-7878f929a08e45eaea38c822871483d60470abe0_modified_15.0:/u/xqg5sq/insight-lab/salus/gpgpu-sim_distribution/lib/gcc-/cuda-11080/release:/u/xqg5sq/Documents/deps/cuda/lib:/u/xqg5sq/Documents/deps/cuda/lib64:
+doing: export -n PTX_SIM_USE_PTX_FILE
+Skipping setup_environment - already set
+------------------
+
+Contents of /u/xqg5sq/insight-lab/salus/util/job_launching/../../sim_run_11.8/kmeans-rodinia-3.1/_o__i___data_kdd_cup/QV100-2B_INSN-V1-SALUS/kmeans-rodinia-3.1-_o__i___data_kdd_cup.gpgpu-sim_git-commit-7878f929a08e45eaea38c822871483d60470abe0_modified_15.0.e1
+------------------
+/u/xqg5sq/insight-lab/salus/util/job_launching/../../sim_run_11.8/kmeans-rodinia-3.1/_o__i___data_kdd_cup/QV100-2B_INSN-V1-SALUS/slurm.sim: line 52: /u/xqg5sq/insight-lab/salus/gpu-app-collection/src/..//bin/11.8/release/kmeans-rodinia-3.1: No such file or directory
+
+------------------
+**********************************************************

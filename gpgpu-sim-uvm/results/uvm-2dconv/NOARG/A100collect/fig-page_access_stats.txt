@@ -1,0 +1,2 @@
+tlb_hit,pt_hit,pt_miss_outstand,pt_miss_pend
+869648,38583,2046,587975

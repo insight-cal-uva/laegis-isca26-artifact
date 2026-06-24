@@ -1,0 +1,1 @@
+15:57:11      1 kmeans-rodinia-3.1     _o__i___data_kdd_cup                                                                                 QV100-2B_INSN-V1-SALUS    kmeans-rodinia-3.1.gpgpu-sim_git-commit-7878f929a08e45eaea38c822871483d60470abe0_modified_15.0
