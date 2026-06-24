@@ -1,0 +1,59 @@
+# -----------------------------
+# 1) Build kernel modules
+# -----------------------------
+make modules NV_VERBOSE=1 DEBUG=1 -j12
+
+# -----------------------------
+# 2) Install the rebuilt modules into the running kernel's module tree
+#    Preferred: modules_install (if supported)
+# -----------------------------
+# sudo make modules_install
+cp nvidia*.ko /lib/modules/$(uname -r)/updates/dkms/
+sudo depmod -a
+
+# Verify which module files will be used (should point to your installed path, not dkms if you want your build)
+modinfo -n nvidia
+modinfo -n nvidia_uvm
+
+# -----------------------------
+# 3) Set nvidia_uvm module options (persist across reboot)
+# -----------------------------
+sudo tee /etc/modprobe.d/nvidia-uvm.conf >/dev/null <<'EOF'
+options nvidia_uvm uvm_debug_prints=1
+options nvidia_uvm uvm_enable_builtin_tests=1
+options nvidia_uvm uvm_perf_prefetch_enable=1
+options nvidia_uvm uvm_perf_prefetch_threshold=1
+options nvidia_uvm uvm_perf_fault_batch_count=256
+EOF
+
+# -----------------------------
+# 4) Update initramfs so early boot uses the new modules/options
+# -----------------------------
+sudo update-initramfs -u
+
+# -----------------------------
+# 5) Reboot to reload everything (CC mode friendly)
+# -----------------------------
+sudo reboot
+
+# -----------------------------
+# 6) After reboot: verify modules + params
+# -----------------------------
+uname -r
+modinfo -n nvidia
+modinfo -n nvidia_uvm
+lsmod | egrep 'nvidia|uvm'
+
+# Check module parameters actually applied
+cat /sys/module/nvidia_uvm/parameters/uvm_debug_prints 2>/dev/null
+cat /sys/module/nvidia_uvm/parameters/uvm_enable_builtin_tests 2>/dev/null
+cat /sys/module/nvidia_uvm/parameters/uvm_perf_prefetch_enable 2>/dev/null
+cat /sys/module/nvidia_uvm/parameters/uvm_perf_prefetch_threshold 2>/dev/null
+cat /sys/module/nvidia_uvm/parameters/uvm_perf_fault_batch_count 2>/dev/null
+
+# Logs
+dmesg -T | egrep -i 'nvidia|uvm' | tail -n 200
+
+# Note: Builtin test ioctl defs: nvidia-uvm/uvm_test_ioctl.h
+#       Test implementations:   nvidia-uvm/uvm_test.c
+#       (Run your uvm_test userspace tool as needed after confirming uvm_enable_builtin_tests=1)
