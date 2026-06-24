@@ -1,0 +1,8 @@
+export CUDA_HOME=/u/xqg5sq/Documents/deps/cuda
+export CUDA_NVCC_EXECUTABLE=$CUDA_HOME/bin/nvcc
+export CUDNN_LIB_DIR=$CUDA_HOME/lib64
+export CUDNN_INCLUDE_DIR=$CUDA_HOME/include/
+export CUDNN_LIBRARY=$CUDA_HOME/lib64
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+export CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
