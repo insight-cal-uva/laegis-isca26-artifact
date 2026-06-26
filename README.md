@@ -10,7 +10,7 @@ At a high level, this artifact includes:
 - The camera-ready paper PDF can be accessed [[here](https://adwaitjog.github.io/docs/pdf/yang_laegis_isca26.pdf)].
 ## Included vs. Omitted Components
 
-Due to an ongoing patent process, the LÆGIS-specific implementation details used for Figure 12, Figure 13, Figure 14, and Figure 16 are **not included** in this public artifact. These mechanisms were implemented on top of the simulator infrastructure included in this repository, but the LÆGIS-specific code paths themselves are currently withheld.
+The LÆGIS-specific implementation details used for Figure 12, Figure 13, Figure 14, and Figure 16 are **not included** in this public artifact. These mechanisms were implemented on top of the simulator infrastructure included in this repository, but the LÆGIS-specific code paths themselves are currently withheld for now and will be updated in the future.
 
 If you have questions about those implementation details, please contact the author at `yangyang@virginia.edu` and we can discuss them further.
 
