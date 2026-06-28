@@ -12,7 +12,7 @@ At a high level, this artifact includes:
 
 The LÆGIS-specific implementation details used for Figure 12, Figure 13, Figure 14, and Figure 16 are **not included** in this public artifact. These mechanisms were implemented on top of the simulator infrastructure included in this repository, but the LÆGIS-specific code paths themselves are currently withheld for now and will be updated in the future.
 
-If you have questions about those implementation details, please contact the author at `yangyang@virginia.edu` and we can discuss them further.
+If you have questions about those implementation details, please contact the author at `yangyang@virginia.edu`.
 
 ## Licensing
 
